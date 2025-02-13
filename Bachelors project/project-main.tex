@@ -1,0 +1,76 @@
+\documentclass[%
+% final,           % Un-comment when finished (to e.g. remove watermark)
+11pt,
+article,
+oneside,
+english,
+a4paper
+]{memoir}
+
+% Global definition: Name of the project (e.g. for the headers)
+% NOTE: The text of the front page is defined manually!
+\newcommand{\projecttitle}{Designing and benchmarking a bonus-malus system against known systems}
+\newcommand{\projecttitledanish}{Design og sammenligning af et bonus-malus system imod kendte systemer}
+
+
+\input{preamble}
+
+
+\begin{document}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Frontmatter (before the actual content) 
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\frontmatter
+
+% Frontpage and abstract (this will set the page number to count all pages)
+% If you want to let the page counter reset, go to line 71 in the file.
+\include{front/frontpages}
+
+% List of fixme-notes -- REMEMBER TO REMOVE!
+%  --> When removed, things will end on the correct pages
+\listoffixmes
+
+% \include{front/preface}
+
+% Table of contents
+\clearpage
+\tableofcontents*
+
+% Introduction (as an actual chapter, but *without* a number)
+\include{front/intro}
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Mainmatter (the actual content)
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\mainmatter
+
+
+% Chapter 1
+\include{chapters/chap1}
+
+% Chapter 2
+\include{chapters/chap2}
+
+
+% ~~~~~~~~~~~~
+% Bibliography
+% ~~~~~~~~~~~~
+\clearpage
+
+% Change the sorting of references to NAME-YEAR-TITLE (see preamble for details)
+\begin{refcontext}[sorting=nyt]
+  % Standard bibliography
+  \raggedyright[4em] \printbibliography
+
+  % With custom title (activate in preamble)
+  % \raggedyright[4em] \printbibliography[heading=memoirbib]
+\end{refcontext}
+
+
+% ~~~~~~~~~~
+% Appendices
+% ~~~~~~~~~~
+%\appendix
+%\include{app/app}
+\end{document} 

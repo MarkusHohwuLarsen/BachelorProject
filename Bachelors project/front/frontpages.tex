@@ -1,0 +1,95 @@
+%% ============================================================================
+%%
+%%  Master's thesis
+%%
+%%  Author: FORNAVN EFTERNAVN
+%%
+%%  Front page, abstract and colophon
+%%
+%%  Original template: Jakob Lysgaard Rørsted (Mosumgaard)
+%% ============================================================================
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% The title page and verso (colophon)
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+% Get font-info
+\makeatletter
+\edef\fontandleading{\@memptsize.0/\the\baselineskip}
+\makeatother
+
+\begin{titlingpage}
+
+  % The actual front page (corrected for margin displacement)
+  \newlength{\frontpagecorrection}
+  \calccentering{\frontpagecorrection}
+  \begin{adjustwidth*}{\frontpagecorrection-2cm}{-\frontpagecorrection-2cm}
+
+    \centering
+    \scshape
+
+    {\fontsize{22pt}{26pt}\selectfont\spread{Title pending}} \par
+
+    \vspace{0.5cm}
+
+    {\fontsize{14pt}{18pt}\selectfont\spread{Hvad skal en sej kort titel lige være}} \par
+
+    \vspace{2cm}
+
+    \includegraphics[height=7cm]{front/segla1b}
+
+    \vspace{2cm}
+
+    \fontsize{16pt}{20pt}\selectfont
+    \spread{Markus Alexander Hohwü Larsen}\par
+    \spread{202205800}\par
+
+    \bigskip
+
+    \fontsize{14pt}{18pt}\selectfont
+    \spread{Bachelors Thesis in Mathematics-Economics}\par
+    \spread{June 2025}\par
+
+    \vfill
+
+    Supervisor: \par
+    \href{https://pure.au.dk/portal/en/persons/jabl%40econ.au.dk}{Jakob Thomsen Bloch} \par
+
+    \vfill
+
+    \fontsize{12pt}{14.5pt}\selectfont
+    \href{https://www.math.au.dk/}{Department of Mathematics}\par
+    \href{https://www.au.dk/}{Aarhus University}
+
+  \end{adjustwidth*}
+\end{titlingpage}
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Abstracts
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\thispagestyle{chapter}
+
+% ~~~~~~~~~~~~~~~~~
+% Abstract: English
+% ~~~~~~~~~~~~~~~~~
+\begin{multiabstract}{Abstract (English) (0.5 side)}
+\noindent Bonus malus yap yap yap
+
+\end{multiabstract}
+
+
+% ~~~~~~~~~~~~~~~~~
+% Abstract: Danish
+% ~~~~~~~~~~~~~~~~~
+\plainbreak{2}
+
+% Switch to Danish
+\selectlanguage{danish}
+\begin{multiabstract}{Resumé (Dansk) (0.5 side)}
+\noindent Bonus malus bla bla bla
+
+\end{multiabstract}
+
+% Reset document language to English
+\selectlanguage{english}
